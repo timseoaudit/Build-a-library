@@ -18,11 +18,11 @@ class Media { // creating super class
 
     }
     toggleCheckOutStatus() { // method that changes the value saved to the _isCheckedOut property
-      if (this.isCheckedOut === false) {
-        this.isCheckedOut = true;
+      if (this._isCheckedOut === false) {
+        this._isCheckedOut = true;
       }
       else {
-        this.isCheckedOut = false;
+        this._isCheckedOut = false;
       }
     }
     getAverageRating() { // method that returns an average value of the ratings array
@@ -37,7 +37,7 @@ class Media { // creating super class
     // Book Class
     class Book extends Media { // creating a Book class that extends Media
         constructor(title, author, pages) { // Book class constructor
-        super(title) // calling super on the title property
+        super(title); // calling super on the title property
         this._author = author; // author is a string
         this._pages = pages; // pages is a number
       }
@@ -50,5 +50,16 @@ class Media { // creating super class
       }
 
       // Movie Class
-  
-    
+      class Movie extends Media { // creating a Movie class that extends Media
+        constructor(title, director, runTime) { // Movie class constructor
+          super(title); // calling super on the title property
+          this._director = director; // director is a string
+          this._runTime = runTime; // runTime is a number
+        }
+        get director() { // getter method for director
+          return this._director;
+        }
+        get runTime() { // getter method for runTime
+          return this._runTime;
+        }
+      }
