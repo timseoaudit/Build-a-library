@@ -93,7 +93,7 @@ const speed = new Movie('Speed', 'Jan de Bont', 116) // create a movie instance
 
 // test couple of Movie class methods
 speed.toggleCheckOutStatus()
-//console.log(speed.isCheckedOut);
+console.log(speed.isCheckedOut);
 speed.addRating(1)
 speed.addRating(1)
 speed.addRating(5)
