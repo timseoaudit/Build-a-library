@@ -1,3 +1,4 @@
+// Super Class
 class Media { // creating super class
     constructor(keyOne) {
       this._title = keyOne // title is a string
@@ -31,6 +32,23 @@ class Media { // creating super class
     addRating(newRating) { // method that adds a rating between 1 and 5 to the ratings array
       this._ratings.push(newRating);
     }
-    }
+    };
+
+    // Book Class
+    class Book extends Media { // creating a Book class that extends Media
+        constructor(title, author, pages) { // Book class constructor
+        super(title) // calling super on the title property
+        this._author = author; // author is a string
+        this._pages = pages; // pages is a number
+      }
+      get author() { // getter method for author
+        return this._author;
+      }
+      get pages() { // getter method for pages
+        return this._pages;
+      }
+      }
+
+      // Movie Class
   
     
