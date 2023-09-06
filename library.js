@@ -64,6 +64,21 @@ class Media { // creating super class
         }
       }
 
+      // CD Class
+      class CD extends Media { // creating a CD class that extends Media
+        constructor(title, artist, songs) { // CD class constructor
+          super(title); //  calling super on the title property
+          this._artist = artist // artist is a string
+          this._songs = [songs] // songs is an array
+        }
+        get artist() { // getter method for artist
+          return this._artist;
+        }
+        get songs() { // getter method for songs
+          return this._songs;
+        }
+      }
+
       const historyOfEverything = new Book('A Short History of Nearly Everthing', 'Bill Bryson', 544) //create a book instance
 
 // test couple of Book class methods
@@ -74,3 +89,12 @@ historyOfEverything.addRating(5);
 historyOfEverything.addRating(5);
 console.log(historyOfEverything.getAverageRating());
 
+const speed = new Movie('Speed', 'Jan de Bont', 116) // create a movie instance
+
+// test couple of Movie class methods
+speed.toggleCheckOutStatus()
+//console.log(speed.isCheckedOut);
+speed.addRating(1)
+speed.addRating(1)
+speed.addRating(5)
+console.log(speed.getAverageRating());
