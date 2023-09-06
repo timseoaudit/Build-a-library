@@ -63,3 +63,14 @@ class Media { // creating super class
           return this._runTime;
         }
       }
+
+      const historyOfEverything = new Book('A Short History of Nearly Everthing', 'Bill Bryson', 544) //create a book instance
+
+// test couple of Book class methods
+historyOfEverything.toggleCheckOutStatus();
+console.log(historyOfEverything.isCheckedOut);
+historyOfEverything.addRating(4);
+historyOfEverything.addRating(5);
+historyOfEverything.addRating(5);
+console.log(historyOfEverything.getAverageRating());
+
